@@ -111,10 +111,14 @@ df_means(mtcars)
 ```
 
 ```{r}
-df_means(faithful)
+calculate_benz_windpower <- function(air_density,
+                                     rotor_radius,
+                                     wind_velocity) {
+  if(wind_velocity > 130) {
+    warning('woah, thats a pretty high wind speed. Are you sure?')
+  }
+} {
+  0.3 * air_density * pi * (rotor_radius^2) *(wind_velocity^3)
+}
+calculate_benz_windpower(1.2, 30, 50)
 ```
-<<<<<<< HEAD
-
-git
-=======
->>>>>>> fd359d6d850f91e087fe3bc40e7f5e4c05325515
