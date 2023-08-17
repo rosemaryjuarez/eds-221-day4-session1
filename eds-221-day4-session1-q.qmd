@@ -4,6 +4,10 @@ format: html
 editor: visual
 ---
 
+```{r}
+library(tidyverse)
+```
+
 ## Functions
 
 make a function that doubles a value
@@ -67,3 +71,45 @@ temperature <- function(scale, degrees) {   if (scale == 'metric') {     degrees
 ```
 
 °F = (K − 273.15) × 1.8 + 32
+
+## More Functions
+
+we are gonna create a data frame, and our fucntion is going to output a row of out data?
+
+create a subset within a function, and return something based on that subset
+
+```{r}
+dog_choice <- data.frame(dog_name = c('khora', 'teddy', 'waffle', 'banjo', 'tallie'),
+                         food = c('everything', 'salmon', 'pancakes', 'chicken', 'enchiladas'))
+```
+
+```{r}
+dog_menu <- function(enter_dog_name) {
+  my_subset <- filter(dog_choice, dog_name == enter_dog_name)
+   print(paste('my name is', my_subset$dog_name, 'and my favorite food is', my_subset$food))
+}
+```
+
+```{r}
+dog_menu('concha')
+```
+
+## Function with a for loop
+
+```{r}
+df_means <- function(df) {
+  for (i in seq_along(df)) {
+    col_mean <- mean(df[[i]], na.rm = TRUE, 2)
+    column_name <- colnames(df[i])
+    print(paste('the mean value of', column_name, 'is', col_mean))
+  }
+}
+```
+
+```{r}
+df_means(mtcars)
+```
+
+```{r}
+df_means(faithful)
+```
