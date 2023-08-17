@@ -14,4 +14,4 @@ write a function that, given temperature in kelvin, if a user selects 'metric' t
 temperature <- function(scale, degrees) {   if (scale == 'metric') {     degrees - 273.15   } else if (scale == 'english') {     (degrees - 273.15) * 1.8 + 32   } else {     print('please use english or metric scale')   } }  temperature('metric', 300)
 ```
 
-°F = (K − 273.15) × 1.8 + 32
+°F = (K − 273.15) × 1.8 + 32g
