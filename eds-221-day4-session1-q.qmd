@@ -55,3 +55,15 @@ info_me <- function(age, hometown) {
 
 info_me(22, 'port hueneme')
 ```
+
+```{r}
+calculate_animal_years <- function(species, age_human_years) {   if (species == 'dog') {     age_human_years *7   } else if (species == 'goat') {     age_human_years * 4.7   } else {     print('please enter dog or goat')   } }  calculate_animal_years('dog', 10)
+```
+
+write a function that, given temperature in kelvin, if a user selects 'metric' to the scale, then return degrees celsius, or if they select 'english, then return degrees in fahrenheit
+
+```{r}
+temperature <- function(scale, degrees) {   if (scale == 'metric') {     degrees - 273.15   } else if (scale == 'english') {     (degrees - 273.15) * 1.8 + 32   } else {     print('please use english or metric scale')   } }  temperature('metric', 300)
+```
+
+°F = (K − 273.15) × 1.8 + 32
