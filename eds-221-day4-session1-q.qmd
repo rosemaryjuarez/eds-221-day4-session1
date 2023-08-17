@@ -113,5 +113,8 @@ df_means(mtcars)
 ```{r}
 df_means(faithful)
 ```
+<<<<<<< HEAD
 
 git
+=======
+>>>>>>> fd359d6d850f91e087fe3bc40e7f5e4c05325515
