@@ -4,86 +4,14 @@ format: html
 editor: visual
 ---
 
-## Functions
-
-make a function that doubles a value
-
 ```{r}
-double_value <- function(my_dollars) {
-  print(2 * my_dollars)
-}
-```
-
-```{r}
-double_value(10.13)
-```
-
-```{r}
-monthly_income <- c(42.50, 50.54 )
-
-
-```
-
-create a function that returns an awesome restaurant name given a cool animal and your favorite food
-
-```{r}
-name_restaurant <- function(animal, food) {
-  print(paste0(animal, food))
-}
-name_restaurant('rats', 'spaghetti')
-```
-
-```{r}
-# given temperature in degrees farenheit white a function that converts it to celsius
-```
-
-```{r}
-convert_celsius <- function(degrees){
-  print((degrees - 32) * (5/9))
-}
-
-convert_celsius(52)
-
-```
-
-create a function that given inputs of age and hometown, returns 'i am \_\_ years old, and im from \_\_\_'
-
-```{r}
-info_me <- function(age, hometown) {
-  print(paste('i am', age, 'years old and im from', hometown))
-}
-
-info_me(22, 'port hueneme')
-```
-
-```{r}
-calculate_animal_years <- function(species, age_human_years) {
-  if (species == 'dog') {
-    age_human_years *7
-  } else if (species == 'goat') {
-    age_human_years * 4.7
-  } else {
-    print('please enter dog or goat')
-  }
-}
-
-calculate_animal_years('dog', 10)
+calculate_animal_years <- function(species, age_human_years) {   if (species == 'dog') {     age_human_years *7   } else if (species == 'goat') {     age_human_years * 4.7   } else {     print('please enter dog or goat')   } }  calculate_animal_years('dog', 10)
 ```
 
 write a function that, given temperature in kelvin, if a user selects 'metric' to the scale, then return degrees celsius, or if they select 'english, then return degrees in fahrenheit
 
 ```{r}
-temperature <- function(scale, degrees) {
-  if (scale == 'metric') {
-    degrees - 273.15
-  } else if (scale == 'english') {
-    (degrees - 273.15) * 1.8 + 32
-  } else {
-    print('please use english or metric scale')
-  }
-}
-
-temperature('metric', 300)
+temperature <- function(scale, degrees) {   if (scale == 'metric') {     degrees - 273.15   } else if (scale == 'english') {     (degrees - 273.15) * 1.8 + 32   } else {     print('please use english or metric scale')   } }  temperature('metric', 300)
 ```
 
 °F = (K − 273.15) × 1.8 + 32
